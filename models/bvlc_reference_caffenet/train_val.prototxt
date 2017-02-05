@@ -9,8 +9,8 @@ layer {
   }
   transform_param {
     mirror: true
-    crop_size: 227
-    mean_file: "~/Desktop/caffe/examples/imagenet/labels/imagenet_mean.binaryproto"
+    crop_size: 200
+    mean_file: "/Users/karen/Desktop/caffe/examples/imagenet/labels/imagenet_mean.binaryproto"
   }
 # mean pixel / channel-wise mean instead of mean image
 #  transform_param {
@@ -21,8 +21,8 @@ layer {
 #    mirror: true
 #  }
   data_param {
-    source: "~/Desktop/caffe/examples/imagenet/ilsvrc12_train_lmdb"
-    batch_size: 256
+    source: "/Users/karen/Desktop/caffe/examples/imagenet/ilsvrc12_train_lmdb"
+    batch_size: 15
     backend: LMDB
   }
 }
@@ -36,19 +36,19 @@ layer {
   }
   transform_param {
     mirror: false
-    crop_size: 227
-    mean_file: "~/Desktop/caffe/examples/imagenet/labels/imagenet_mean.binaryproto"
+    crop_size: 200
+    mean_file: "/Users/karen/Desktop/caffe/examples/imagenet/labels/imagenet_mean.binaryproto"
   }
 # mean pixel / channel-wise mean instead of mean image
 #  transform_param {
-#    crop_size: 227
+#    crop_size: 200
 #    mean_value: 104
 #    mean_value: 117
 #    mean_value: 123
 #    mirror: false
 #  }
   data_param {
-    source: "~/Desktop/caffe/examples/imagenet/ilsvrc12_val_lmdb"
+    source: "/Users/karen/Desktop/caffe/examples/imagenet/ilsvrc12_val_lmdb"
     batch_size: 50
     backend: LMDB
   }
