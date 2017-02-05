@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 set -e
 
-./build/tools/caffe train \
-    --solver=models/bvlc_reference_caffenet/solver.prototxt \
-    --snapshot=models/bvlc_reference_caffenet/caffenet_train_10000.solverstate.h5 \
+/Users/karen/Desktop/caffe/build/tools/caffe train \
+    --solver=/Users/karen/Desktop/caffe/models/bvlc_reference_caffenet/solver.prototxt \
+    --snapshot=/Users/karen/Desktop/caffe/examples/imagenet/caffenet_train_iter_1379.solverstate \
     $@
