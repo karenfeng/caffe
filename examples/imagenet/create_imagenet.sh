@@ -3,19 +3,20 @@
 # N.B. set the path to the imagenet train + val data dirs
 set -e
 
-EXAMPLE=examples/imagenet
-DATA=data/ilsvrc12
-TOOLS=build/tools
+CAFFE_HOME_DIR=~/Desktop/caffe
+EXAMPLE=$CAFFE_HOME_DIR/examples/imagenet
+DATA=$EXAMPLE/labels
+TOOLS=$CAFFE_HOME_DIR/build/tools
 
-TRAIN_DATA_ROOT=~Desktop/caffe/examples/train/
-VAL_DATA_ROOT=~Desktop/caffe/examples/val/
+TRAIN_DATA_ROOT=$EXAMPLE/train/
+VAL_DATA_ROOT=$EXAMPLE/val/
 
-# Set RESIZE=true to resize the images to 256x256. Leave as false if images have
+# Set RESIZE=true to resize the images to 200x200. Leave as false if images have
 # already been resized using another tool.
 RESIZE=true
 if $RESIZE; then
-  RESIZE_HEIGHT=256
-  RESIZE_WIDTH=256
+  RESIZE_HEIGHT=200
+  RESIZE_WIDTH=200
 else
   RESIZE_HEIGHT=0
   RESIZE_WIDTH=0
